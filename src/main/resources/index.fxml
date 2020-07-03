@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="473.0" prefWidth="734.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.yx.wx.controller.IndexController">
+    <children>
+        <Button fx:id="btn" layoutX="592.0" layoutY="323.0" mnemonicParsing="false" onAction="#execute" prefHeight="23.0" prefWidth="105.0" style="-fx-background-color: #1E9FFF; -fx-text-fill: white;" text="生成sql" />
+      <Pane layoutX="20.0" layoutY="22.0" prefHeight="135.0" prefWidth="689.0" style="-fx-background-color: #fff; -fx-border-radius: 5px; -fx-border-color: #1E9FFF;">
+         <children>
+            <Label layoutX="62.0" layoutY="24.0" text="旧APPID" />
+            <Label layoutX="47.0" layoutY="60.0" text="旧APPSECRET" />
+            <TextField id="old_appid" layoutX="200.0" layoutY="20.0" onInputMethodTextChanged="#cleanHint" onKeyPressed="#cleanHint" prefHeight="15.0" prefWidth="367.0" />
+            <TextField id="old_appsecret" layoutX="200.0" layoutY="56.0" onKeyPressed="#cleanHint" prefHeight="23.0" prefWidth="367.0" />
+            <Label layoutX="50.0" layoutY="91.0" text="accessToken" />
+            <TextField id="accessToken" layoutX="200.0" layoutY="87.0" prefHeight="23.0" prefWidth="367.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="20.0" layoutY="171.0" prefHeight="102.0" prefWidth="690.0" style="-fx-background-color: #fff; -fx-border-radius: 5px; -fx-border-color: #1E9FFF;">
+         <children>
+            <Label layoutX="68.0" layoutY="21.0" text="新APPID" />
+            <Label layoutX="53.0" layoutY="58.0" text="新APPSECRET" />
+            <TextField id="new_appid" layoutX="198.0" layoutY="17.0" onKeyPressed="#cleanHint" prefHeight="23.0" prefWidth="367.0" />
+            <TextField id="new_appsecret" layoutX="198.0" layoutY="54.0" onKeyPressed="#cleanHint" prefHeight="23.0" prefWidth="367.0" />
+         </children>
+      </Pane>
+      <TextField fx:id="pathInput" editable="false" layoutX="145.0" layoutY="323.0" onAction="#selectPath" onKeyPressed="#cleanHint" onMouseClicked="#selectPath" prefHeight="23.0" prefWidth="409.0" />
+      <Label layoutX="48.0" layoutY="327.0" text="输出目录" />
+      <Label id="hint" fx:id="hint" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="377.0" prefHeight="23.0" prefWidth="701.0" textAlignment="CENTER" textFill="RED" textOverrun="CLIP" />
+    </children>
+</AnchorPane>
